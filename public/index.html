@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestor de Tareas</h1>
+    </header>
+
+    <main>
+        <section id="task-form">
+            <h2>Agregar Nueva Tarea</h2>
+            <form id="add-task-form">
+                <label for="task-name">Nombre:</label>
+                <input type="text" id="task-name" required>
+
+                <label for="task-desc">Descripción:</label>
+                <textarea id="task-desc"></textarea>
+
+                <label for="task-due">Fecha de Vencimiento:</label>
+                <input type="date" id="task-due">
+
+                <button type="submit">Agregar Tarea</button>
+            </form>
+        </section>
+
+        <section id="task-update">
+            <h2>Actualizar Tarea</h2>
+            <form id="update-task-form">
+                <label for="update-task-id">ID de Tarea:</label>
+                <input type="text" id="update-task-id" required>
+
+                <label for="update-task-name">Nombre:</label>
+                <input type="text" id="update-task-name">
+
+                <label for="update-task-desc">Descripción:</label>
+                <textarea id="update-task-desc"></textarea>
+
+                <label for="update-task-due">Fecha de Vencimiento:</label>
+                <input type="date" id="update-task-due">
+
+                <label for="update-task-completed">Completada:</label>
+                <input type="checkbox" id="update-task-completed">
+
+                <button type="submit">Actualizar Tarea</button>
+            </form>
+        </section>
+
+        <section id="task-delete">
+            <h2>Eliminar Tarea</h2>
+            <form id="delete-task-form">
+                <label for="delete-task-id">ID de Tarea:</label>
+                <input type="text" id="delete-task-id" required>
+                <button type="submit">Eliminar Tarea</button>
+            </form>
+        </section>
+
+        <section id="auth">
+            <h2>Registro</h2>
+            <form id="register-form">
+                <label for="reg-username">Usuario:</label>
+                <input type="text" id="reg-username" required>
+                <label for="reg-password">Contraseña:</label>
+                <input type="password" id="reg-password" required>
+                <button type="submit">Registrarse</button>
+            </form>
+            <h2>Inicio de Sesión</h2>
+            <form id="login-form">
+                <label for="login-username">Usuario:</label>
+                <input type="text" id="login-username" required>
+                <label for="login-password">Contraseña:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </section>
+
+        <section id="task-list">
+            <h2>Lista de Tareas</h2>
+            <div id="tasks-container">
+                <!-- Las tareas se insertarán dinámicamente aquí -->
+            </div>
+        </section>
+
+        <section id="report">
+            <!-- Los informes se insertarán dinámicamente aquí -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gestor de Tareas</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
